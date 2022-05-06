@@ -1,0 +1,57 @@
+<%- include('_header') %>
+
+		<!-- Page Banner Area Start-->
+		<div class="page-banner-area bg-img-3 pt-95 pb-90">
+		    <div class="container">
+		        <div class="row">
+		            <div class="page-banner-content col-12 text-center">
+                        <h2>Çalışma Alanlarım</h2>
+                        <p>Çalışma alanlarıma göz atın...</p>
+		                <ul class="breadcrumb-pagination">
+		                    <li><a href="/">Anasayfa</a></li>
+		                    <li>Çalışma Alanları</li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Page Banner Area End-->
+		<!-- Service Page Banner Area Start-->
+		<div class="service-page-banner pt-100 pb-40">
+		    <div class="container">
+		    
+		        <div class="row">
+		            <div class="col-12">
+		                <!--Section Title Start-->
+                        <div class="section-title text-center mb-70">
+                            <h2>Alanında Uzman Olduğum Çalışma Alanları</h2>           
+                        </div>
+                        <!--Section Title End-->
+		            </div>
+		        </div>
+		        <div class="row">
+
+					<% for (let i=0; i< calismas.length; i++) { %>
+                    <!--Single Service Start-->
+		            <div class="col-lg-4 col-md-6">
+		                <div class="single-service mb-50">
+		                    <div class="single-service-content">
+		                        <h4><a href="/calismas/<%= calismas[i].slug %>"><%= calismas[i].name %></a></h4>
+		                        <p><%= calismas[i].description %></p>
+								<a href="/calismas/<%= calismas[i].slug %>"><span>Detaya Göz At...</span> <i class="icofont icofont-long-arrow-right"></i></a>
+                            <% if(user){ %>
+								<a href="/calismas/<%=calismas[i].slug %>?_method=DELETE" 
+									onclick="return confirm('Silmek istediğinizden emin misiniz?')"  type="submit" class="btn btn-danger ">Çalışmayı Sil</a> <br><br>
+                             <% } %>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--Single Service End-->
+					<% } %>
+
+					
+		        </div>
+		    </div>
+		</div>
+		<!-- Service Page Banner Area End-->
+		<%- include('_footer') %>

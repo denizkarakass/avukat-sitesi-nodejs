@@ -1,0 +1,51 @@
+<%- include('_header') %>
+
+		<!-- Page Banner Area Start-->
+		<div class="page-banner-area bg-img-3 pt-95 pb-90">
+		    <div class="container">
+		        <div class="row">
+		            <div class="page-banner-content col-12 text-center">
+                        <h2>Yazılar</h2>
+                        <p>Paylaştığım makale, yazı ve içeriklere göz at...</p>
+		                <ul class="breadcrumb-pagination">
+		                    <li><a href="/">Anasayfa</a></li>
+		                    <li>Yazılar</li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Page Banner Area End-->
+		<!-- Blog Area Start-->
+		<div class="blog-area pt-100">
+		    <div class="container">
+		        <div class="row">
+
+					<% for (let i=0; i< blogs.length; i++) { %>
+                    <!--Single Blog Start-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single-blog mb-30">
+                            <div class="blog-content">
+                                <h3><a href="/blogs/<%= blogs[i].slug %>"><%= blogs[i].name %></a></h3>
+                                <p><%= blogs[i].description %></p>
+                                <a href="/blogs/<%= blogs[i].slug %>"><span>Okumaya Devam Et...</span> <i class="icofont icofont-long-arrow-right"></i></a>
+
+								<% if(user){ %>
+									<a href="/blogs/<%=blogs[i].slug %>?_method=DELETE" 
+										onclick="return confirm('Silmek istediğinizden emin misiniz?')"
+										 type="submit" class="btn btn-danger ">Yazıyı Sil</a> <br><br>
+								 <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single Blog End--> 
+					<% } %>
+
+		        </div>
+
+		    </div>
+		</div>
+		<!-- Blog Area End-->
+		<br><br>
+		
+		<%- include('_footer') %>

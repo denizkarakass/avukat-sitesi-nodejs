@@ -1,0 +1,35 @@
+<%- include('_header') %>
+
+<br><br><br><br>
+
+<div class="mx-auto col-md-7">
+    <div class="contact-form">
+        <div class="contact-form-title">
+            <h3>Admin Girişi </h3>
+        </div>
+        <form id="contact-form" action="users/login" method="POST">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="single-input">
+                        <input name="email" placeholder="E-mail" type="email">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="single-input">
+                        <input name="password" placeholder="Şifre" type="password">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="single-input">
+                        <button class="sent-btn" type="submit">Giriş Yap</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <p class="form-messege"></p>
+    </div>
+</div>
+
+<br><br><br><br>
+
+<%- include('_footer') %>

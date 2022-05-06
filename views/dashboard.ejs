@@ -1,0 +1,69 @@
+<%- include('_header') %>
+
+		<!-- Page Banner Area Start-->
+		<div class="page-banner-area bg-img-3 pt-95 pb-90">
+		    <div class="container">
+		        <div class="row">
+		            <div class="page-banner-content col-12 text-center">
+                        <h2> İçerik Ekleme Sayfası</h2>
+                        <h3>Hoşgeldiniz <%= user.name %></h3>
+						<p><%= user.email %></p>
+		                <ul class="breadcrumb-pagination">
+		                    <li><a href="#">Yazı Ekleme</a></li>
+							<li><a href="#home">Çalışma Alanı Ekleme</a></li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Page Banner Area End-->
+<br><br>
+<center><h2>Siteye Yazı Ekleme</h2></center>
+<br>
+		<div id="home" class="col-lg-6 mx-auto">
+			<form method="POST" action="/blogs" >
+				<div class="form-group">
+				  <label for="exampleFormControlInput1">Yazı Adı</label>
+				  <input name="name" type="text" class="form-control" id="exampleFormControlInput1">
+				</div>
+				
+				<div class="form-group">
+				  <label for="exampleFormControlTextarea1">Yazı Açıklaması</label>
+				  <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				</div>
+
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">Yazı İçeriği</label>
+					<textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+				  </div>
+
+				  <button type="submit" class="btn btn-success">İçeriği Yayınla</button>
+				</form>
+
+		</div>
+<br> <hr>
+<br>
+<center><h2>Çalışma Alanı Ekleme</h2></center>
+<br>
+		<div id="" class="col-lg-6 mx-auto">
+			<form method="POST" action="/calismas" >
+				<div class="form-group">
+				  <label for="exampleFormControlInput1">Çalışma Alanı Adı</label>
+				  <input name="name" type="text" class="form-control" id="exampleFormControlInput1" >
+				</div>
+
+				<div class="form-group">
+					<label for="exampleFormControlInput1">Çalışma Alanı Açıklaması</label>
+					<input name="description" type="text" class="form-control" id="exampleFormControlInput1" >
+				  </div>
+				
+				<div class="form-group">
+				  <label for="exampleFormControlTextarea1">Çalışma Alanı İçeriği</label>
+				  <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				</div>
+				<button type="submit" class="btn btn-success">İçeriği Yayınla</button>
+			</form>
+
+		</div>
+<br>
+		<%- include('_footer') %>

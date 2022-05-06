@@ -1,0 +1,43 @@
+<%- include('_header') %>
+
+		<!-- Page Banner Area Start-->
+		<div class="page-banner-area bg-img-3 pt-95 pb-90">
+		    <div class="container">
+		        <div class="row">
+		            <div class="page-banner-content col-12 text-center">
+                        <h2><%= blog.name %></h2>
+                        <p><%= blog.description %></p>
+		                <ul class="breadcrumb-pagination">
+		                    <li><a href="/">Anasayfa</a></li>
+		                    <li><a href="/blogs">Blog</a></li>
+		                    <li><%= blog.name %></li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Page Banner Area End-->
+		<!-- Blog Area Start-->
+		<div class="blog-area pt-100">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-lg-8 blog-post-item">
+		                <div class="blog-wrapper blog-details">
+                         
+                            <div class="blog-content">
+                          
+                                <h3><%= blog.name %></h3>
+                                <div class="row">
+                                  
+                                    <p><%= blog.content %></p>
+
+                                </div>
+                            </div>
+		                </div>
+                        <br><br><br><br> <br><br><br><br> <br><br><br><br>
+		        </div>
+		    </div>
+		</div>
+		<!-- Blog Area End-->
+
+		<%- include('_footer') %>

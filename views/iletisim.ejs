@@ -1,0 +1,100 @@
+<%- include('_header') %>
+
+		<!-- Page Banner Area Start-->
+		<div class="page-banner-area bg-img-3 pt-95 pb-90">
+		    <div class="container">
+		        <div class="row">
+		            <div class="page-banner-content col-12 text-center">
+                        <h2>İletişim</h2>
+                        <p> İletişime geç ...</p>
+		                <ul class="breadcrumb-pagination">
+		                    <li><a href="/">Anasayfa</a></li>
+		                    <li>İletişim</li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Page Banner Area End-->
+		<!--Contact Us Area Start-->
+		<div class="contact-us-area pt-100">
+		    <div class="container">
+		        <div class="row">
+                    <!--Contact Information Start--> 
+                    <div class="col-md-5 contact-address">
+                        <div class="contact-information">
+                            <ul>
+                                <li>
+                                    <h5>Adres:</h5>
+                                    <p>256, Centerl Town, Main Street Hilton Tower, New Yourk</p>
+                                </li>
+                                <li>
+                                    <h5>Telefon:</h5>
+                                    <p><a href="tel:+8801265897568">+8801265 897 568</a><br>
+                                       <a href="tel:+8801265897568">+8801235 598 656</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>Web</h5>
+                                    <p><a href="#">www.ramazanaslan.av.tr</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Contact Information End--> 
+                    <!--Contact Form Start--> 
+		            <div class="col-md-7">
+		                <div class="contact-form">
+		                    <div class="contact-form-title">
+		                        <h3>İletişime Geç </h3>
+		                    </div>
+		                    <form id="contact-form" action="/iletisim" method="post">
+		                        <div class="row">
+		                            <div class="col-md-6">
+		                                <div class="single-input">
+		                                    <input name="ad" placeholder="Ad" type="text">
+		                                </div>
+		                            </div>
+									<div class="col-md-6">
+		                                <div class="single-input">
+		                                    <input name="soyad" placeholder="Soyad" type="text">
+		                                </div>
+		                            </div>
+		                            <div class="col-md-6">
+		                                <div class="single-input">
+		                                    <input name="email" placeholder="E-mail" type="email">
+		                                </div>
+		                            </div>
+		                            <div class="col-md-6">
+		                                <div class="single-input">
+		                                    <input name="telefon" placeholder="Telefon" type="text">
+		                                </div>
+		                            </div>
+		                            <div class="col-md-12">
+		                                <div class="single-input">
+		                                    <input name="konu" placeholder="Konu" type="text">
+		                                </div>
+		                            </div>
+		                            <div class="col-md-12">
+		                                <div class="single-input">
+		                                    <textarea name="mesaj" cols="10" rows="4" placeholder="Mesaj"></textarea>
+		                                </div>
+		                            </div>
+		                            <div class="col-md-12">
+		                                <div class="single-input">
+		                                    <button class="sent-btn" type="submit">Gönder</button>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </form>
+		                    <p class="form-messege"></p>
+		                </div>
+		            </div>
+		            <!--Contact Form End-->
+		        </div>
+		    </div>
+		</div>
+		<!--Contact Us Area End-->
+		
+		<%- include('_footer') %>

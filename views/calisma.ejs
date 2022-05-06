@@ -1,0 +1,43 @@
+<%- include('_header') %>
+
+		<!-- Page Banner Area Start-->
+		<div class="page-banner-area bg-img-3 pt-95 pb-90">
+		    <div class="container">
+		        <div class="row">
+		            <div class="page-banner-content col-12 text-center">
+                        <h2><%= calisma.name %></h2>
+                        <p><%= calisma.description %></p>
+		                <ul class="breadcrumb-pagination">
+		                    <li><a href="/calismalar">Çalışma Alanlarım</a></li>
+		                    <li><a href="#"><%= calisma.name %></a></li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Page Banner Area End-->
+		<!-- Servcice Layout Area Start-->
+		<div class="service-layout-area pt-100 pb-40">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-lg-8">
+		                <div class="single-service-wrapper">
+		                    <div class="single-service-img img-full">
+		                        <img src="img/service/service3.jpg" alt="">
+		                    </div>
+		                    <div class="single-service-content">
+		                        <h3><%= calisma.name %></h3>
+		                        <p><%= calisma.content %></p>
+		                           
+		                    </div>
+		                   
+		                </div>
+		               
+		            </div>
+		           
+		        </div>
+		    </div>
+		</div>
+		<!-- Servcice Layout Area End-->
+	
+		<%- include('_footer') %>
